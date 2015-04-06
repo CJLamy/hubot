@@ -84,14 +84,6 @@ interactions:
       probability: 0
 
     - pattern:
-        regex: (\W|^)(haha|lol|rofl)(\W|$)
-      event: giphy
-      tag: giggling
-      message: >-
-        $user: $gif
-      probability: 0
-
-    - pattern:
         regex: (\W|^)tired(\W|$)
       event: giphy
       tag: lazy sloth

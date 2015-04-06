@@ -27,6 +27,7 @@ interactions:
         - >-
           $user: http://media.giphy.com/media/12CmDbPafGzs3K/giphy.gif
         - Turn that frown upside down! :)
+      probability: 0
 
     - pattern:
         regex: (\W|^)cold(\W|$)
@@ -40,6 +41,7 @@ interactions:
         latitude: 63.460833
         longitude: 142.785833
       units: C
+      probability: 0
 
     - pattern:
         regex: (\W|^)(good ?)?bye(\W|$)
@@ -47,6 +49,7 @@ interactions:
       event: say
       message: >-
         Baby, come back! https://www.youtube.com/embed/DnfSoaJxe3Y
+      probability: 0
 
     - pattern:
         regex: >-
@@ -71,12 +74,14 @@ interactions:
       event: say
       messageType: emote
       message: group hug!
+      probability: 0
 
     - pattern:
         regex: >-
           (\W|^)##heartbot##\+\+
       event: say
       message: You like me! You really like me!
+      probability: 0
 
     - pattern:
         regex: (\W|^)(haha|lol|rofl)(\W|$)
@@ -84,7 +89,7 @@ interactions:
       tag: giggling
       message: >-
         $user: $gif
-      probability: 0.4
+      probability: 0
 
     - pattern:
         regex: (\W|^)tired(\W|$)
@@ -92,9 +97,11 @@ interactions:
       tag: lazy sloth
       message: >-
         $user: $gif
+      probability: 0
 
     - pattern:
-        regex: (\W|^)puppy me(\W|$)
+        regex: >-
+            (\W|^)##heartbot## puppy me(\W|$)
       event: giphy
       tag: cute puppy
       message: >-
@@ -102,7 +109,8 @@ interactions:
       probability: 1
 
     - pattern:
-        regex: (\W|^)kitt(y|en) me(\W|$)
+        regex: >-
+            (\W|^)##heartbot## kitt(y|en) me(\W|$)
       event: giphy
       tag: kitty
       message: >-
@@ -113,9 +121,10 @@ interactions:
         regex: (\W|^)ugh(\W|$)
       event: say
       message: would you like a hug, $user?
-      probability: 0.2
+      probability: 0
 
     - pattern:
         regex: (\W|^)hot(\W|$)
       event: say
       message: you sure are.
+      probability: 0

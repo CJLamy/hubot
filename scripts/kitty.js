@@ -7,10 +7,10 @@ module.exports = function(robot) {
     request.get({ url: website }, function (error, response, body) {
       // If the request fails, lets the user know.
       if (error) {
-        msg.reply('Attempt to pull link failed');
+        msg.send('Attempt to pull link failed');
       } else {
         json = JSON.parse(body);
-        msg.reply(json.data.image_original_url);
+        msg.send(json.data.image_original_url);
       }
     });
   });

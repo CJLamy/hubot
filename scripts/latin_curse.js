@@ -72,11 +72,11 @@ function randomSelect(anArray) {
 }
 
 function insult() {
-  var msg = randomSelect(hearThis) + ", " +
+  var curse = randomSelect(hearThis) + ", " +
             randomSelect(ohYou) + " " +
             randomSelect(ofLittleFaith) + ", for you will " +
             randomSelect(haveBadThingsHappen) + "!";
-  console.log(msg);
+  msg.send(curse);
 }
 
 // Command that will pull from swearmipsum to send a friendly curse to folks.

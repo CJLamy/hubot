@@ -24,8 +24,8 @@ var haveBadThingsHappen =
       "crash the king's best-loved chariot"];
 
 var ohYou =
-    [ "O thou",
-      "O ye"];
+    [ "o thou",
+      "o ye"];
 
 var ofLittleFaith =
     [ "of little faith",

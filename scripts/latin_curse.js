@@ -78,3 +78,10 @@ function insult() {
             randomSelect(haveBadThingsHappen) + "!";
   console.log(msg);
 }
+
+// Command that will pull from swearmipsum to send a friendly curse to folks.
+module.exports = function(robot) {
+  robot.hear(/I curse thee/i, function(msg) {
+    insult();
+  });
+};

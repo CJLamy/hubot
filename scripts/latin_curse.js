@@ -1,5 +1,4 @@
-//http://www.swearemipsum.com/?paragraphs=5&type=Dubbed&startswithlorem=false
-
+// Command that will pull from swearmipsum to send a friendly curse to folks.
 module.exports = function(robot) {
   robot.hear(/I curse thee/i, function(msg) {
     var request = require('request');
@@ -9,6 +8,7 @@ module.exports = function(robot) {
       if (error) {
         msg.send('Attempt to pull link failed');
       } else {
+        //Use Cheerio to pull HTML and scrape it.
         var $ = require('cheerio');
         var parsedHTML = $.load(html);
         var curseText = parsedHTML("#result").children().first().text();

@@ -4,12 +4,11 @@ module.exports = function(robot) {
   // Makes a request to api.giphy to find a kitty gif.
   var crawl = function (error, response, body) {
     // If the request fails, lets the user know.
-    msg.send("made it!");
     if (error) {
-      msg.send('Attempt to pull link failed');
+      return 'Attempt to pull link failed';
     } else {
       json = JSON.parse(body);
-      msg.send(json.data.image_original_url);
+      return json.data.image_original_url;
     }
   };
 
@@ -19,14 +18,14 @@ module.exports = function(robot) {
 
   robot.respond(/kitty me/i, function(msg) {
     request.get({ url: website }, function (error, response, body) {
-      crawl(error, response, body);
+      msg.send(crawl(error, response, body));
     });
   });
 
   robot.respond(/kitty bomb/i, function(msg) {
     for (i = 0; i < 5; i++) {
       request.get({ url: website }, function (error, response, body) {
-        crawl(error, response, body);
+        msg.send(crawl(error, response, body));
       });
     }
   });

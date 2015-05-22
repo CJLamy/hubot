@@ -14,10 +14,7 @@ module.exports = function(robot) {
       }
     });
   });
-};
 
-// Bomb with all the kitties!
-module.exports = function(robot) {
   robot.respond(/kitty bomb/i, function(msg) {
     var request = require('request');
     var json;

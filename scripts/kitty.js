@@ -4,6 +4,7 @@ module.exports = function(robot) {
   // Makes a request to api.giphy to find a kitty gif.
   var crawl = function (error, response, body) {
     // If the request fails, lets the user know.
+    msg.send("made it!");
     if (error) {
       msg.send('Attempt to pull link failed');
     } else {

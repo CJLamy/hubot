@@ -21,7 +21,7 @@ module.exports = function(robot) {
   robot.respond(/kitty bomb/i, function(msg) {
     var request = require('request');
     var json;
-    var website = 'http://tv.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=ugly-kitty';
+    var website = 'http://tv.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=ugly-cat';
     for (i = 0; i < 5; i++) {
         request.get({ url: website }, function (error, response, body) {
         // If the request fails, lets the user know.

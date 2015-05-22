@@ -16,7 +16,7 @@ module.exports = function(robot) {
   });
 };
 
-// Bomb with ugly kitties!
+// Bomb with all the kitties!
 module.exports = function(robot) {
   robot.respond(/kitty bomb/i, function(msg) {
     var request = require('request');

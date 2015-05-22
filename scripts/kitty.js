@@ -17,12 +17,16 @@ module.exports = function(robot) {
   var website = 'https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=kitty';
 
   robot.respond(/kitty me/i, function(msg) {
-    request.get({ url: website }, crawl(error, response, body));
+    request.get({ url: website }, function (error, response, body) {
+      crawl(error, response, body);
+    });
   });
 
   robot.respond(/kitty bomb/i, function(msg) {
     for (i = 0; i < 5; i++) {
-      request.get({ url: website }, crawl(error, response, body));
+      request.get({ url: website }, function (error, response, body) {
+        crawl(error, response, body);
+      });
     }
   });
 };

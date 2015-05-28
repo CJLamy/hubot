@@ -84,4 +84,8 @@ module.exports = function(robot) {
   robot.hear(/I curse thee/i, function(msg) {
     msg.send(insult());
   });
+
+  robot.hear(/cedric/i, function(msg) {
+    msg.end("VR");
+  });
 };

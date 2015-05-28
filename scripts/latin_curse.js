@@ -86,7 +86,7 @@ module.exports = function(robot) {
   });
 
   robot.hear(/cedric/i, function(msg) {
-    msg.end("VR");
+    msg.send("VR");
 
   });
 };

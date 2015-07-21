@@ -8,8 +8,8 @@ module.exports = function (robot) {
     return total.toString();
   };
 
-  robot.respond(/roll( me)? (.*)d(.*)/i, function (res) {
-      res.send(roll(parseInt(res.match[2]), parseInt(res.match[3])));
+  robot.respond(/roll( me)? (\d+)d(\d+)/i, function (res) {
+    res.send(roll(parseInt(res.match[2]), parseInt(res.match[3])));
   });
 
 };
